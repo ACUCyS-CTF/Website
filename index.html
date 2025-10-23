@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACUCyS Christmas CTF 2025 • Student-built, Australia-wide</title>
+    <meta name="description" content="Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ACUCyS Christmas CTF 2025">
+    <meta property="og:description" content="Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:url" content="https://acucysctf.org">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ACUCyS Christmas CTF 2025">
+    <meta name="twitter:description" content="Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.">
+    <meta name="twitter:image" content="assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/hero-bg.jpg" as="image">
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "ACUCyS Christmas CTF 2025",
+        "description": "Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.",
+        "startDate": "2025-12-??T12:00:00+11:00",
+        "endDate": "2025-12-??T12:00:00+11:00",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "location": {
+            "@type": "VirtualLocation",
+            "url": "https://discord.gg/yourinvite"
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "ACUCyS",
+            "url": "https://acucys.org"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Sticky Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="ACUCyS" width="40" height="40">
+                    <span class="logo-text">ACUCyS</span>
+                </div>
+                
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="#why" class="nav-link">Why</a></li>
+                        <li><a href="#how" class="nav-link">How</a></li>
+                        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#clubs" class="nav-link">Clubs</a></li>
+                        <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="#register" class="btn btn-primary" id="register-btn">Register free</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <img src="assets/hero-bg.jpg" alt="Festive cybersecurity themed background" width="1920" height="1080">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Australia-wide Christmas CTF.<br>Built by students, for students.</h1>
+                    <p class="hero-subtitle">24 hours online, free to join, beginner friendly to advanced.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="#register" class="btn btn-primary btn-large" id="hero-register">Register free</a>
+                        <a href="https://discord.gg/yourinvite" class="btn btn-secondary btn-large" id="discord-btn">Join the Discord</a>
+                    </div>
+                    
+                    <div class="hero-links">
+                        <a href="/beginner-guide" class="link">Beginner guide</a>
+                        <a href="/what-is-a-ctf" class="link">What is a CTF?</a>
+                    </div>
+                    
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-label">Event starts in:</div>
+                        <div class="countdown-timer" id="countdown-timer">
+                            <span class="time-unit">
+                                <span class="time-value" id="days">00</span>
+                                <span class="time-label">days</span>
+                            </span>
+                            <span class="time-unit">
+                                <span class="time-value" id="hours">00</span>
+                                <span class="time-label">hours</span>
+                            </span>
+                            <span class="time-unit">
+                                <span class="time-value" id="minutes">00</span>
+                                <span class="time-label">minutes</span>
+                            </span>
+                            <span class="time-unit">
+                                <span class="time-value" id="seconds">00</span>
+                                <span class="time-label">seconds</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <ul class="features-list">
+                            <li>Hands-on challenges</li>
+                            <li>Form a team or go solo</li>
+                            <li>Prizes and bragging rights</li>
+                            <li>Mentors on call</li>
+                        </ul>
+                        <p class="hero-note">Run by ACUCyS volunteers. Free to enter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ <!--   
+        <!-- Social Proof 
+        <section class="social-proof">
+            <div class="container">
+                <div class="clubs-grid" id="clubs-preview">
+                    <!-- Clubs will be populated by JavaScript 
+                </div>
+            </div>
+        </section>
+-->    
+        <!-- Why Join Section -->
+        <section class="why-section" id="why">
+            <div class="container">
+                <h2 class="section-title">Why join?</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3 class="card-title">Learn fast</h3>
+                        <p class="card-text">Short, practical challenges across web, OSINT, crypto, reversing, forensics.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">👥</div>
+                        <h3 class="card-title">Meet people</h3>
+                        <p class="card-text">Team up with students from campuses across Australia.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <h3 class="card-title">Boost your resume</h3>
+                        <p class="card-text">Ship write ups and show your skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How It Works Section -->
+        <section class="how-section" id="how">
+            <div class="container">
+                <h2 class="section-title">How it works</h2>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Register</h3>
+                            <p class="step-text">You can make or join a team later.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Join Discord</h3>
+                            <p class="step-text">Get updates and ask questions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Play for 24 hours</h3>
+                            <p class="step-text">Pick challenges, submit flags, climb the board.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Wrap up</h3>
+                            <p class="step-text">Winners announced, write ups shared.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="beginner-route">
+                    <div class="route-card">
+                        <h3 class="route-title">Beginner route</h3>
+                        <p class="route-text">New to CTFs? Start with our beginner pack.</p>
+                        <a href="/beginner-guide" class="btn btn-outline">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Schedule Section -->
+        <section class="schedule-section" id="schedule">
+            <div class="container">
+                <h2 class="section-title">Schedule</h2>
+                <div class="schedule-content">
+                    <div class="schedule-times">
+                        <div class="time-block">
+                            <div class="time-label">Start</div>
+                            <div class="time-value" id="start-time">DD Mon 2025, 12:00 AEDT</div>
+                        </div>
+                        <div class="time-block">
+                            <div class="time-label">Finish</div>
+                            <div class="time-value" id="end-time">DD Mon 2025, 12:00 AEDT</div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="calendar-buttons">
+                        <button class="btn btn-outline" id="google-cal">Add to Google Calendar</button>
+                        <button class="btn btn-outline" id="apple-cal">Add to Apple Calendar</button>
+                        <button class="btn btn-outline" id="outlook-cal">Add to Outlook</button>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Registration Section -->
+        <section class="registration-section" id="register">
+            <div class="container">
+                <div class="registration-card">
+                    <h2 class="card-title">Ready to join?</h2>
+                    <div class="benefits-list">
+                        <div class="benefit">✓ Free to enter</div>
+                        <div class="benefit">✓ Beginner friendly</div>
+                        <div class="benefit">✓ Team or solo</div>
+                        <div class="benefit">✓ Mentors available</div>
+                    </div>
+                    
+                    <!-- Tally.so Form Embed -->
+                    <div class="tally-form-container">
+                        <iframe 
+                            src="https://tally.so/embed/mK7pGA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&disablePrivacy=1&noConsent=1" 
+                            width="100%" 
+                            height="750" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0"
+                            title="ACUCyS Christmas CTF 2025 Registration Form"
+                            onload="this.style.opacity=1"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        </iframe>
+                        <!-- Fallback if iframe fails to load -->
+                        <div class="form-fallback" style="display: none; text-align: center; padding: var(--space-xl);">
+                            <h3>Registration Form</h3>
+                            <p>Having trouble loading the form? <a href="https://tally.so/r/mK7pGA" target="_blank" class="btn btn-primary">Open in new tab</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-note">
+                        <span class="lock-icon">🔒</span>
+                        We respect your privacy. No spam.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Teaser Challenge -->
+        <section class="teaser-section">
+            <div class="container">
+                <h2 class="section-title">Try a teaser</h2>
+                <div class="teaser-card" id="teaser-card">
+                    <div class="teaser-content">
+                        <h3 class="teaser-title">Warm-up Challenge</h3>
+                        <p class="teaser-hint">What's the most common password in the world? (Hint: it's not 'password')</p>
+                        <div class="teaser-input-group">
+                            <input type="text" id="teaser-answer" placeholder="Enter your answer" class="teaser-input">
+                            <button class="btn btn-primary" id="teaser-submit">Submit</button>
+                        </div>
+                        <div class="teaser-result" id="teaser-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clubs Section -->
+        <section class="clubs-section" id="clubs">
+            <div class="container">
+                <h2 class="section-title">ACUCyS Member Clubs</h2>
+                <div class="clubs-grid" id="clubs-full">
+                    <!-- Clubs will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sponsors Section -->
+        <section class="sponsors-section" id="sponsors">
+            <div class="container">
+                <h2 class="section-title">Thanks to our partners</h2>
+                <div class="sponsors-grid" id="sponsors-grid">
+                    <!-- Sponsors will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list" id="faq-list">
+                    <!-- FAQ items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/code-of-conduct">Code of Conduct</a>
+                    <a href="/rules">Rules</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ACUCyS. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/acucys" aria-label="Twitter">🐦</a>
+                        <a href="https://linkedin.com/company/acucys" aria-label="LinkedIn">💼</a>
+                        <a href="https://github.com/acucys" aria-label="GitHub">🐙</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast notifications -->
+    <div class="toast-container" id="toast-container"></div>
+    
+    <!-- Scripts -->
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/teaser.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
