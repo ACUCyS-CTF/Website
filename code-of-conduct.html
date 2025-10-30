@@ -26,29 +26,46 @@
     <!-- Skip to content link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-text">Next event: Jingle Shells 2025</span>
+                <a href="/jingleshells" class="btn btn-secondary btn-small" data-keep-params="true">View event</a>
+                <button class="announcement-dismiss" aria-label="Dismiss announcement" title="Dismiss">×</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="/">
-                        <img src="assets/logo.svg" alt="ACUCyS" width="40" height="40">
-                        <span class="logo-text">ACUCyS</span>
+                        <img src="assets/logo.svg" alt="ACUCyS CTF" width="40" height="40">
+                        <span class="logo-text">ACUCyS CTF</span>
                     </a>
                 </div>
                 
                 <nav class="nav" aria-label="Main navigation">
                     <ul class="nav-list">
-                        <li><a href="/#why" class="nav-link">Why</a></li>
-                        <li><a href="/#how" class="nav-link">How</a></li>
-                        <li><a href="/#schedule" class="nav-link">Schedule</a></li>
-                        <li><a href="/#faq" class="nav-link">FAQ</a></li>
-                        <li><a href="/#clubs" class="nav-link">Clubs</a></li>
+                        <li><a href="/#about" class="nav-link">About</a></li>
+                        <li class="nav-item-has-menu">
+                            <a href="/jingleshells" class="nav-link" data-keep-params="true">Events</a>
+                            <div class="nav-menu" role="menu">
+                                <a href="/jingleshells" role="menuitem" class="nav-menu-item" data-keep-params="true">Jingle Shells 2025</a>
+                                <a href="/#past-events" role="menuitem" class="nav-menu-item">Past events</a>
+                            </div>
+                        </li>
                         <li><a href="/#sponsors" class="nav-link">Sponsors</a></li>
+                        <li><a href="/#clubs" class="nav-link">Clubs</a></li>
+                        <li><a href="/#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
                 
-                <a href="/#register" class="btn btn-primary" id="register-btn">Register free</a>
+                <a href="/#register" class="btn btn-primary" id="register-btn" data-keep-params="true">Register free</a>
             </div>
         </div>
     </header>
@@ -232,7 +249,7 @@
                     <a href="/media-kit">Media Kit</a>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 ACUCyS. All rights reserved.</p>
+                    <p>Run by ACUCyS CTF volunteers. Free to enter.</p>
                     <div class="social-links">
                         <a href="https://twitter.com/acucys" aria-label="Twitter">🐦</a>
                         <a href="https://linkedin.com/company/acucys" aria-label="LinkedIn">💼</a>
@@ -244,6 +261,26 @@
     </footer>
     
     <!-- Scripts -->
+    <script>
+    (function() {
+      const keep = ['utm_source','utm_medium','utm_campaign','utm_content','ref'];
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams();
+      keep.forEach(k => { const v = url.searchParams.get(k) || localStorage.getItem('qs_'+k); if (v) { params.set(k, v); localStorage.setItem('qs_'+k, v); }});
+      document.querySelectorAll('a[data-keep-params="true"]').forEach(a => {
+        const href = new URL(a.href, window.location.origin);
+        params.forEach((v,k) => { if (!href.searchParams.has(k)) href.searchParams.set(k, v); });
+        a.href = href.toString();
+      });
+      const bar = document.querySelector('.announcement-bar');
+      const header = document.getElementById('header');
+      const btn = document.querySelector('.announcement-dismiss');
+      function setHeaderOffset(){ if(bar && header){ document.documentElement.style.setProperty('--announcement-offset', bar.offsetHeight+'px'); } }
+      setHeaderOffset();
+      window.addEventListener('resize', setHeaderOffset);
+      if (btn && bar) { btn.addEventListener('click', () => { bar.style.display = 'none'; document.documentElement.style.setProperty('--announcement-offset', '0px'); }); }
+    })();
+    </script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
