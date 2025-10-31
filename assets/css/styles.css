@@ -307,6 +307,10 @@ body {
   z-index: 120;
 }
 
+.dark-theme .announcement-bar {
+  background: var(--js-pine);
+}
+
 @media (prefers-color-scheme: dark) {
   .announcement-bar { background: var(--js-pine); }
 }
@@ -321,6 +325,18 @@ body {
 
 .announcement-text {
   font-weight: 600;
+}
+
+.announcement-bar .btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.announcement-bar .btn-secondary:hover,
+.announcement-bar .btn-secondary:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .announcement-dismiss {
@@ -395,6 +411,20 @@ body {
 .hero-links .link:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+.card .link,
+.content-wrapper .link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.card .link:hover,
+.content-wrapper .link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .countdown {
@@ -577,6 +607,35 @@ body {
   border: 1px solid var(--border);
   text-align: center;
   transition: transform var(--transition-base);
+}
+
+/* Ensure cards have proper text colors even when inside hero */
+.hero .card {
+  color: var(--text);
+}
+
+.hero .card .card-title {
+  color: var(--text);
+}
+
+.hero .card .card-text {
+  color: var(--text-muted);
+}
+
+.hero .card .features-list {
+  color: var(--text);
+}
+
+.hero .card .countdown-label {
+  color: var(--text);
+}
+
+.hero .card .time-label {
+  color: var(--text-muted);
+}
+
+.hero .card .time-value {
+  color: var(--text);
 }
 
 .card:hover {
