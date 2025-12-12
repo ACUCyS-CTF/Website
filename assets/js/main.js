@@ -52,7 +52,7 @@ class CTFApp {
 
   async loadContent() {
     try {
-      const response = await fetch('assets/content.json');
+      const response = await fetch('/assets/content.json');
       this.content = await response.json();
     } catch (error) {
       console.warn('Could not load content.json, using defaults');
@@ -64,8 +64,8 @@ class CTFApp {
     return {
       eventName: "ACUCyS Christmas CTF 2025",
       tagline: "Student-built. Free to join. Beginner friendly.",
-      start: "2025-12-??T12:00:00+11:00",
-      end: "2025-12-??T12:00:00+11:00",
+      start: "2025-12-20T09:00:00+11:00",
+      end: "2025-12-21T21:00:00+11:00",
       timezone: "Australia/Melbourne",
       registerUrl: "https://example.com/register",
       discordUrl: "https://discord.gg/yourinvite",
@@ -174,31 +174,41 @@ class CTFApp {
   }
 
   updateEventTimes() {
-    const startTime = document.getElementById('start-time');
-    const endTime = document.getElementById('end-time');
+    const startEls = [
+      document.getElementById('start-time'),
+      document.getElementById('start-time-flagship')
+    ].filter(Boolean);
+    const endEls = [
+      document.getElementById('end-time'),
+      document.getElementById('end-time-flagship')
+    ].filter(Boolean);
     
-    if (startTime && this.content.start) {
+    if (startEls.length && this.content.start) {
       const startDate = new Date(this.content.start);
-      startTime.textContent = startDate.toLocaleDateString('en-AU', {
+      const startStr = startDate.toLocaleDateString('en-AU', {
         day: 'numeric',
         month: 'short',
         year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
-        timeZoneName: 'short'
+        timeZoneName: 'short',
+        timeZone: 'Australia/Melbourne'
       });
+      startEls.forEach(el => el.textContent = startStr);
     }
     
-    if (endTime && this.content.end) {
+    if (endEls.length && this.content.end) {
       const endDate = new Date(this.content.end);
-      endTime.textContent = endDate.toLocaleDateString('en-AU', {
+      const endStr = endDate.toLocaleDateString('en-AU', {
         day: 'numeric',
         month: 'short',
         year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
-        timeZoneName: 'short'
+        timeZoneName: 'short',
+        timeZone: 'Australia/Melbourne'
       });
+      endEls.forEach(el => el.textContent = endStr);
     }
   }
 
@@ -256,7 +266,7 @@ class CTFApp {
       
       if (sponsor.logo) {
         sponsorEl.innerHTML = `
-          <img src="${sponsor.logo}" alt="${sponsor.name}" class="sponsor-logo">
+          <img src=".${sponsor.logo}" alt="${sponsor.name}" class="sponsor-logo">
         `;
       } else {
         sponsorEl.innerHTML = `<span>${sponsor.name}</span>`;

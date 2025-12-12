@@ -40,6 +40,7 @@ class CountdownTimer {
     }
     
     try {
+      // Ensure consistent interpretation in browsers; content may be UTC or with offset
       this.startTime = new Date(startTimeStr);
       this.endTime = new Date(endTimeStr);
     } catch (error) {

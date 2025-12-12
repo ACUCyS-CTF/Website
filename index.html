@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACUCyS Christmas CTF 2025 • Student-built, Australia-wide</title>
+    <title>ACUCyS CTF</title>
     <meta name="description" content="Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.">
     
     <!-- Open Graph -->
@@ -58,27 +58,44 @@
     <!-- Skip to content link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-text">Next event: Jingle Shells 2025</span>
+                <a href="/jingleshells.html" class="btn btn-secondary btn-small" data-keep-params="true">View event</a>
+                <button class="announcement-dismiss" aria-label="Dismiss announcement" title="Dismiss">×</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Sticky Header -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="assets/logo.png" alt="ACUCyS" width="40" height="40">
-                    <span class="logo-text">ACUCyS</span>
+                    <img src="assets/logo.png" alt="ACUCyS CTF" width="40" height="40">
+                    <span class="logo-text">ACUCyS CTF</span>
                 </div>
                 
                 <nav class="nav" aria-label="Main navigation">
                     <ul class="nav-list">
-                        <li><a href="#why" class="nav-link">Why</a></li>
-                        <li><a href="#how" class="nav-link">How</a></li>
-                        <li><a href="#schedule" class="nav-link">Schedule</a></li>
-                        <li><a href="#faq" class="nav-link">FAQ</a></li>
-                        <li><a href="#clubs" class="nav-link">Clubs</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item-has-menu">
+                            <a href="/jingleshells.html" class="nav-link" data-keep-params="true">Events</a>
+                            <div class="nav-menu" role="menu">
+                                <a href="/jingleshells.html" role="menuitem" class="nav-menu-item" data-keep-params="true">Jingle Shells 2025</a>
+                                <a href="#past-events" role="menuitem" class="nav-menu-item">Past events</a>
+                            </div>
+                        </li>
                         <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                        <li><a href="#clubs" class="nav-link">Clubs</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
                 
-                <a href="#register" class="btn btn-primary" id="register-btn">Register free</a>
+                <a href="#register" class="btn btn-primary" id="register-btn" data-keep-params="true">Register free</a>
             </div>
         </div>
     </header>
@@ -92,6 +109,7 @@
             </div>
             <div class="container">
                 <div class="hero-content">
+<<<<<<< HEAD
                     <h1 class="hero-title">Australia-wide Christmas CTF.<br>Built by students, for students.</h1>
                     <p class="hero-subtitle">24 hours online, free to join, beginner friendly to advanced.</p>
                     
@@ -124,17 +142,79 @@
                                 <span class="time-value" id="seconds">00</span>
                                 <span class="time-label">seconds</span>
                             </span>
+=======
+                    <!-- Tier 1: Hub identity -->
+                    <h1 class="hero-title">ACUCyS CTF</h1>
+                    <p class="hero-subtitle">Student-run program of ACUCyS running Capture the Flag events for Aussie students</p>
+
+                    <!-- Tier 2: Event spotlight card -->
+                    <div class="card" style="margin: var(--space-xl) auto 0; text-align: left;">
+                        <h2 class="card-title">Jingle Shells 2025</h2>
+                        <p class="card-text">Australia wide Christmas CTF. Built by students, for students.</p>
+                        <ul class="features-list" style="justify-content: flex-start; margin: var(--space-md) 0;">
+                            <li>36 hours online</li>
+                            <li>Free to join</li>
+                            <li>Beginner friendly to advanced</li>
+                        </ul>
+                        <div class="hero-cta" style="padding-top: 10px;">
+                            <a href="#register" class="btn btn-primary btn-large" id="hero-register" data-keep-params="true">Register free</a>
+                            <a href="/jingleshells.html" class="btn btn-secondary btn-large" id="event-details" data-keep-params="true">Event details</a>
+                        </div>
+                        <div id="countdown" class="countdown" aria-live="polite">
+                            <div class="countdown-label" style="text-align: center;">Event starts in:</div>
+                            <div class="countdown-timer" id="countdown-timer">
+                                <span class="time-unit"><span class="time-value" id="days">00</span><span class="time-label">days</span></span>
+                                <span class="time-unit"><span class="time-value" id="hours">00</span><span class="time-label">hours</span></span>
+                                <span class="time-unit"><span class="time-value" id="minutes">00</span><span class="time-label">minutes</span></span>
+                                <span class="time-unit"><span class="time-value" id="seconds">00</span><span class="time-label">seconds</span></span>
+                            </div>
+>>>>>>> f12787a0cbf43f061dc398bf856a9143e5aae7d4
                         </div>
                     </div>
+                    
+                    <div class="hero-links" style="padding-top: 10px;">
+                        <a href="/beginner-guide.html" class="link">Beginner guide</a>
+                        <a href="/what-is-a-ctf.html" class="link">What is a CTF?</a>
+                    </div>
+                    
+                    
                     
                     <div class="hero-features">
                         <ul class="features-list">
                             <li>Hands-on challenges</li>
                             <li>Form a team or go solo</li>
-                            <li>Prizes and bragging rights</li>
                             <li>Mentors on call</li>
                         </ul>
-                        <p class="hero-note">Run by ACUCyS volunteers. Free to enter.</p>
+                        <p class="hero-note">Run by ACUCyS CTF volunteers. Free to enter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- This year's flagship -->
+        <section class="why-section" id="flagship">
+            <div class="container">
+                <h2 class="section-title">This year’s flagship</h2>
+                <div class="cards-grid" style="grid-template-columns: 2fr 3fr;">
+                    <div class="card">
+                        <p>Jingle Shells is our end of year Christmas CTF. Hands on challenges across web, OSINT, crypto, reversing, and forensics. Play solo or form a team. Mentors on call.</p>
+                        <div style="margin-top: var(--space-lg); display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                            <a href="#register" class="btn btn-primary" data-keep-params="true">Register free</a>
+                            <a href="/jingleshells.html" class="btn btn-secondary" data-keep-params="true">Event details</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="schedule-times" style="justify-content: center;">
+                            <div class="time-block">
+                                <div class="time-label">Start</div>
+                                <div class="time-value" id="start-time-flagship">DD Mon 2025, 12:00 AEDT</div>
+                            </div>
+                            <div class="time-block"">
+                                <div class="time-label">Finish</div>
+                                <div class="time-value" id="end-time-flagship">DD Mon 2025, 12:00 AEDT</div>
+                            </div>
+                        </div>
+                            <a href="/what-is-a-ctf.html" class="link" style="white-space: nowrap;">What is a CTF?</a>
                     </div>
                 </div>
             </div>
@@ -195,7 +275,7 @@
                     <div class="timeline-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3 class="step-title">Play for 24 hours</h3>
+                            <h3 class="step-title">Play for 36 hours</h3>
                             <p class="step-text">Pick challenges, submit flags, climb the board.</p>
                         </div>
                     </div>
@@ -259,7 +339,7 @@
                     <!-- Tally.so Form Embed -->
                     <div class="tally-form-container">
                         <iframe 
-                            src="https://tally.so/embed/mK7pGA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&disablePrivacy=1&noConsent=1" 
+                            src="https://tally.so/embed/mK7pGA?alignLeft=1&hideTitle=1&dynamicHeight=1&disablePrivacy=1&noConsent=1" 
                             width="100%" 
                             height="750" 
                             frameborder="0" 
@@ -285,7 +365,7 @@
         </section>
         
         <!-- Teaser Challenge -->
-        <section class="teaser-section">
+        <section class="teaser-section" id="teaser">
             <div class="container">
                 <h2 class="section-title">Try a teaser</h2>
                 <div class="teaser-card" id="teaser-card">
@@ -296,7 +376,7 @@
                             <input type="text" id="teaser-answer" placeholder="Enter your answer" class="teaser-input">
                             <button class="btn btn-primary" id="teaser-submit">Submit</button>
                         </div>
-                        <div class="teaser-result" id="teaser-result"></div>
+                        <div class="teaser-result" id="teaser-result" role="status" aria-live="polite"></div>
                     </div>
                 </div>
             </div>
@@ -339,13 +419,23 @@
             <div class="footer-content">
                 <div class="footer-links">
                     <a href="/code-of-conduct.html">Code of Conduct</a>
+<<<<<<< HEAD
+=======
+                    <a href="/rules">Rules</a>
+>>>>>>> f12787a0cbf43f061dc398bf856a9143e5aae7d4
                     <a href="/privacy.html">Privacy</a>
                     <a href="/contact.html">Contact</a>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 ACUCyS. All rights reserved.</p>
+                    <p>Run by ACUCyS CTF volunteers. Free to enter.</p>
                     <div class="social-links">
+<<<<<<< HEAD
                         <a href="https://www.linkedin.com/company/acucys" aria-label="LinkedIn">💼</a>
+=======
+                        <a href="https://discord.gg/WZAHJ66gPg" aria-label="Discord">💬</a>
+                        <a href="https://www.linkedin.com/company/acucys-ctf" aria-label="LinkedIn">💼</a>
+                        <a href="https://github.com/orgs/ACUCyS-CTF" aria-label="GitHub">🐙</a>
+>>>>>>> f12787a0cbf43f061dc398bf856a9143e5aae7d4
                     </div>
                 </div>
             </div>
@@ -356,6 +446,44 @@
     <div class="toast-container" id="toast-container"></div>
     
     <!-- Scripts -->
+    <script>
+    (function() {
+      const keep = ['utm_source','utm_medium','utm_campaign','utm_content','ref'];
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams();
+      keep.forEach(k => { const v = url.searchParams.get(k) || localStorage.getItem('qs_'+k); if (v) { params.set(k, v); localStorage.setItem('qs_'+k, v); }});
+      document.querySelectorAll('a[data-keep-params="true"]').forEach(a => {
+        const href = new URL(a.href, window.location.origin);
+        params.forEach((v,k) => { if (!href.searchParams.has(k)) href.searchParams.set(k, v); });
+        a.href = href.toString();
+      });
+      // Append params to embedded form
+      const tally = document.querySelector('.tally-form-container iframe');
+      if (tally) {
+        const src = new URL(tally.getAttribute('src'), window.location.origin);
+        params.forEach((v,k) => { if (!src.searchParams.has(k)) src.searchParams.set(k, v); });
+        if (!src.searchParams.has('originPage')) src.searchParams.set('originPage', '/');
+        tally.setAttribute('src', src.toString());
+      }
+      const bar = document.querySelector('.announcement-bar');
+      const header = document.getElementById('header');
+      const btn = document.querySelector('.announcement-dismiss');
+      function setHeaderOffset() {
+        if (bar && header) {
+          const h = bar.offsetHeight;
+          document.documentElement.style.setProperty('--announcement-offset', h + 'px');
+        }
+      }
+      setHeaderOffset();
+      window.addEventListener('resize', setHeaderOffset);
+      if (btn && bar) {
+        btn.addEventListener('click', () => {
+          bar.style.display = 'none';
+          document.documentElement.style.setProperty('--announcement-offset', '0px');
+        });
+      }
+    })();
+    </script>
     <script src="assets/js/analytics.js"></script>
     <script src="assets/js/countdown.js"></script>
     <script src="assets/js/forms.js"></script>

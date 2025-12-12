@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jingle Shells 2025 • ACUCyS CTF</title>
+    <meta name="description" content="Australia wide Christmas CTF. Built by students, for students. 24 hours online. Free to join. Beginner friendly to advanced.">
+    <meta property="og:title" content="Jingle Shells 2025 • ACUCyS CTF">
+    <meta property="og:description" content="Australia wide Christmas CTF. Built by students, for students.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:url" content="https://www.acucysctf.org/jingleshells">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Jingle Shells 2025",
+      "description": "Australia wide Christmas CTF. Built by students, for students.",
+      "startDate": "2025-12-XXT12:00:00+11:00",
+      "endDate": "2025-12-XXT12:00:00+11:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": {"@type": "VirtualLocation", "url": "https://discord.gg/..."},
+      "organizer": {"@type": "Organization", "name": "ACUCyS CTF", "url": "https://www.acucysctf.org"}
+    }
+    </script>
+    <style>
+      .page-hero .btn + .btn { margin-left: var(--space-md); }
+    </style>
+    <script>
+    (function() {
+      const keep = ['utm_source','utm_medium','utm_campaign','utm_content','ref'];
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams();
+      keep.forEach(k => { const v = url.searchParams.get(k) || localStorage.getItem('qs_'+k); if (v) { params.set(k, v); localStorage.setItem('qs_'+k, v); }});
+      window.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('a[data-keep-params="true"]').forEach(a => {
+          const href = new URL(a.href, window.location.origin);
+          params.forEach((v,k) => { if (!href.searchParams.has(k)) href.searchParams.set(k, v); });
+          a.href = href.toString();
+        });
+        const bar = document.querySelector('.announcement-bar');
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.page-hero');
+        function setHeaderOffset(){ if(bar && header){ document.documentElement.style.setProperty('--announcement-offset', bar.offsetHeight+'px'); } }
+        function setHeroOffset(){ if (hero && header) { const total = (bar?bar.offsetHeight:0) + header.offsetHeight; hero.style.paddingTop = `calc(${total}px + var(--space-2xl))`; } }
+        setHeaderOffset();
+        setHeroOffset();
+        window.addEventListener('resize', setHeaderOffset);
+        window.addEventListener('resize', setHeroOffset);
+      });
+    })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+      <div class="container">
+        <div class="announcement-content">
+          <span class="announcement-text">Next event: Jingle Shells 2025</span>
+          <a href="/jingleshells" class="btn btn-secondary btn-small" data-keep-params="true">View event</a>
+          <button class="announcement-dismiss" aria-label="Dismiss announcement" title="Dismiss">×</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="/index.html">
+              <img src="assets/logo.png" alt="ACUCyS CTF" width="40" height="40">
+              <span class="logo-text">ACUCyS CTF</span>
+            </a>
+          </div>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a href="/index.html#about" class="nav-link">About</a></li>
+              <li class="nav-item-has-menu">
+                <a href="/jingleshells.html" class="nav-link" data-keep-params="true">Events</a>
+                <div class="nav-menu" role="menu">
+                  <a href="/jingleshells.html" role="menuitem" class="nav-menu-item" data-keep-params="true">Jingle Shells 2025</a>
+                  <a href="/#past-events" role="menuitem" class="nav-menu-item">Past events</a>
+                </div>
+              </li>
+              <li><a href="/index.html#sponsors" class="nav-link">Sponsors</a></li>
+              <li><a href="/index.html#clubs" class="nav-link">Clubs</a></li>
+              <li><a href="/index.html#faq" class="nav-link">FAQ</a></li>
+              <li><a href="/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="#register" class="btn btn-primary" id="register-btn" data-keep-params="true">Register free</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1) Hero -->
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-content">
+            <h1 class="page-title">Jingle Shells 2025</h1>
+            <p class="page-subtitle">Australia wide Christmas CTF. Built by students, for students.</p>
+            <div class="page-meta">
+              <span class="meta-item">36 hours online</span>
+              <span class="meta-item">Free to join</span>
+              <span class="meta-item">Beginner friendly to advanced</span>
+            </div>
+            <div style="margin-top: var(--space-xl);">
+              <a href="#register" class="btn btn-primary btn-large" data-keep-params="true">Register free</a>
+              <a href="#discord" class="btn btn-secondary btn-large" id="discord-link" data-keep-params="true">Join the Discord</a>
+              <a href="https://jingleshells.acucysctf.org" class="btn btn-outline btn-large" id="ctfd-link" data-keep-params="true" style="display:none;">Open CTFd</a>
+            </div>
+            <div class="countdown" id="countdown">
+              <div class="countdown-label" style="padding-top: 15px;">Event starts in:</div>
+              <div class="countdown-timer" id="countdown-timer">
+                <span class="time-unit"><span class="time-value" id="days">00</span><span class="time-label">days</span></span>
+                <span class="time-unit"><span class="time-value" id="hours">00</span><span class="time-label">hours</span></span>
+                <span class="time-unit"><span class="time-value" id="minutes">00</span><span class="time-label">minutes</span></span>
+                <span class="time-unit"><span class="time-value" id="seconds">00</span><span class="time-label">seconds</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2) Why join -->
+      <section class="why-section">
+        <div class="container">
+          <h2 class="section-title">Why join</h2>
+          <div class="cards-grid">
+            <div class="card"><h3 class="card-title">Learn fast</h3><p class="card-text">Short, practical challenges across web, OSINT, crypto, reversing, forensics.</p></div>
+            <div class="card"><h3 class="card-title">Meet people</h3><p class="card-text">Team up with students across Australia.</p></div>
+            <div class="card"><h3 class="card-title">Boost your resume</h3><p class="card-text">Write ups and real experience.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) How it works -->
+      <section class="how-section">
+        <div class="container">
+          <h2 class="section-title">How it works</h2>
+          <div class="timeline">
+            <div class="timeline-step"><div class="step-number">1</div><div class="step-content"><h3 class="step-title">Register</h3></div></div>
+            <div class="timeline-step"><div class="step-number">2</div><div class="step-content"><h3 class="step-title">Join Discord</h3></div></div>
+            <div class="timeline-step"><div class="step-number">3</div><div class="step-content"><h3 class="step-title">Play for 24 hours</h3></div></div>
+            <div class="timeline-step"><div class="step-number">4</div><div class="step-content"><h3 class="step-title">Wrap up</h3></div></div>
+          </div>
+          <div class="beginner-route"><div class="route-card"><h3 class="route-title">Beginner route</h3><p class="route-text">New to CTFs? Start with our starter guide.</p><a href="/beginner-guide.html" class="btn btn-outline">Get started</a></div></div>
+        </div>
+      </section>
+
+      <!-- 4) Schedule -->
+      <section class="schedule-section">
+        <div class="container">
+          <h2 class="section-title">Schedule</h2>
+          <div class="schedule-content">
+            <div class="schedule-times">
+              <div class="time-block"><div class="time-label">Start</div><div class="time-value" id="start-time">DD Mon 2025, 12:00 AEDT</div></div>
+              <div class="time-block"><div class="time-label">Finish</div><div class="time-value" id="end-time">DD Mon 2025, 12:00 AEDT</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) Registration form -->
+      <section class="registration-section" id="register">
+        <div class="container">
+          <div class="registration-card">
+            <h2 class="card-title">Register for Jingle Shells</h2>
+            <div class="tally-form-container">
+              <iframe 
+                src="https://tally.so/embed/mK7pGA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&disablePrivacy=1&noConsent=1&originPage=%2Fjingleshells" 
+                width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0"
+                title="Jingle Shells 2025 Registration" onload="this.style.opacity=1" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"></iframe>
+              <div class="form-fallback" style="display:none; text-align:center; padding: var(--space-xl);">
+                <h3>Registration Form</h3>
+                <p>Having trouble loading the form? <a href="https://tally.so/r/mK7pGA" target="_blank" class="btn btn-primary">Open in new tab</a></p>
+              </div>
+            </div>
+            <div class="privacy-note"><span class="lock-icon">🔒</span> We respect your privacy.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6) Teaser micro challenge -->
+      <section class="teaser-section" id="teaser">
+        <div class="container">
+          <h2 class="section-title">Teaser micro challenge</h2>
+          <div class="teaser-card">
+            <div class="teaser-content">
+              <h3 class="teaser-title">Warm-up Challenge</h3>
+              <p class="teaser-hint">What's the most common password in the world? (Hint: it's not 'password')</p>
+              <div class="teaser-input-group">
+                <input type="text" id="teaser-answer" placeholder="Enter your answer" class="teaser-input">
+                <button class="btn btn-primary" id="teaser-submit">Submit</button>
+              </div>
+              <div class="teaser-result" id="teaser-result" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7) Clubs and sponsors -->
+      <section class="clubs-section" id="clubs">
+        <div class="container">
+          <h2 class="section-title">ACUCyS Member Clubs</h2>
+          <div class="clubs-grid" id="clubs-full"></div>
+        </div>
+      </section>
+
+      <section class="sponsors-section" id="sponsors">
+        <div class="container">
+          <h2 class="section-title">Thanks to our partners</h2>
+          <div class="sponsors-grid" id="sponsors-grid"></div>
+        </div>
+      </section>
+
+      <!-- 8) FAQ -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="/code-of-conduct.html">Code of Conduct</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-bottom">
+            <p>Run by ACUCyS CTF volunteers. Free to enter.</p>
+            <div class="social-links">
+              <a href="https://discord.gg/WZAHJ66gPg" aria-label="Discord">💬</a>
+              <a href="https://www.linkedin.com/company/acucys-ctf" aria-label="LinkedIn">💼</a>
+              <a href="https://github.com/orgs/ACUCyS-CTF" aria-label="GitHub">🐙</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function(){
+        const bar = document.querySelector('.announcement-bar');
+        const btn = document.querySelector('.announcement-dismiss');
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.page-hero');
+        if (btn && bar) { btn.addEventListener('click', () => { 
+          bar.style.display = 'none'; 
+          document.documentElement.style.setProperty('--announcement-offset', '0px');
+          if (hero && header) { hero.style.paddingTop = `calc(${header.offsetHeight}px + var(--space-2xl))`; }
+        }); }
+      })();
+    </script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/teaser.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Keep params on form embed and Discord link; toggle CTFd link during live window
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const discordFromContent = (window.ctfApp && window.ctfApp.content && (window.ctfApp.content.discordUrl || (window.ctfApp.content.event && window.ctfApp.content.event.discordUrl))) || 'https://discord.gg/...';
+        const discord = document.getElementById('discord-link');
+        if (discord) {
+          const href = new URL(discordFromContent, window.location.origin);
+          params.forEach((v,k)=>{ if(!href.searchParams.has(k)) href.searchParams.set(k,v); });
+          discord.href = href.toString();
+        }
+        const iframe = document.querySelector('.tally-form-container iframe');
+        if (iframe) {
+          const src = new URL(iframe.getAttribute('src'), window.location.origin);
+          params.forEach((v,k)=>{ if(!src.searchParams.has(k)) src.searchParams.set(k,v); });
+          if (!src.searchParams.has('originPage')) src.searchParams.set('originPage','/jingleshells');
+          iframe.setAttribute('src', src.toString());
+        }
+        function updateLive() {
+          if (window.ctfApp && window.ctfApp.countdownTimer) {
+            const state = window.ctfApp.countdownTimer.getEventState();
+            const ctfd = document.getElementById('ctfd-link');
+            if (state.isLive && ctfd) {
+              ctfd.style.display = 'inline-flex';
+            }
+          }
+        }
+        setInterval(updateLive, 1000);
+        updateLive();
+      })();
+    </script>
+  </body>
+</html>
+
+
