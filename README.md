@@ -36,6 +36,7 @@ ACUCyS-Website/
 ### Content Updates
 
 Edit `assets/content.json` to update:
+
 - Event dates and times
 - Registration and Discord URLs
 - Club and sponsor information
@@ -60,7 +61,6 @@ Update `assets/content.json` to modify:
   "faqs": [...]
 }
 ```
-
 
 ## Performance Optimisation
 
@@ -101,8 +101,8 @@ Update `assets/content.json` to modify:
 ## Support
 
 For technical support or questions:
-- **Email**: TBD
-- **Discord**: [ACUCyS Discord](https://discord.com/invite/acucys-ctf-2025)
 
+- **Email**: TBD
+- **Discord**: [ACUCyS Discord](https://discord.gg/erU7crHszw)
 
 **Built with ❤️ by the ACUCyS team**

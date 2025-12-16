@@ -1,316 +1,401 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-AU">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beginner Guide • ACUCyS Christmas CTF 2025</title>
-    <meta name="description" content="Complete beginner guide to CTF competitions. Learn the basics, tools, and strategies to get started with cybersecurity challenges.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Beginner Guide • ACUCyS Christmas CTF 2025">
-    <meta property="og:description" content="Complete beginner guide to CTF competitions. Learn the basics, tools, and strategies to get started with cybersecurity challenges.">
-    <meta property="og:image" content="assets/og-image.jpg">
-    <meta property="og:url" content="https://acucysctf.org/beginner-guide.html">
-    <meta property="og:type" content="article">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <!-- Skip to content link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Announcement Bar -->
-    <div class="announcement-bar" role="region" aria-label="Announcement">
-        <div class="container">
-            <div class="announcement-content">
-                <span class="announcement-text">Next event: Jingle Shells 2025</span>
-                <a href="/jingleshells.html" class="btn btn-secondary btn-small" data-keep-params="true">View event</a>
-                <button class="announcement-dismiss" aria-label="Dismiss announcement" title="Dismiss">×</button>
-            </div>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Beginner Guide • ACUCyS Christmas CTF 2025</title>
+		<meta
+			name="description"
+			content="Complete beginner guide to CTF competitions. Learn the basics, tools, and strategies to get started with cybersecurity challenges." />
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="/">
-                        <img src="assets/logo.svg" alt="ACUCyS CTF" width="40" height="40">
-                        <span class="logo-text">ACUCyS CTF</span>
-                    </a>
-                </div>
-                
-                <nav class="nav" aria-label="Main navigation">
-                    <ul class="nav-list">
-                        <li><a href="/#about" class="nav-link">About</a></li>
-                        <li class="nav-item-has-menu">
-                            <a href="/jingleshells.html" class="nav-link" data-keep-params="true">Events</a>
-                            <div class="nav-menu" role="menu">
-                                <a href="/jingleshells" role="menuitem" class="nav-menu-item" data-keep-params="true">Jingle Shells 2025</a>
-                                <a href="/#past-events" role="menuitem" class="nav-menu-item">Past events</a>
-                            </div>
-                        </li>
-                        <li><a href="/#sponsors" class="nav-link">Sponsors</a></li>
-                        <li><a href="/#clubs" class="nav-link">Clubs</a></li>
-                        <li><a href="/#faq" class="nav-link">FAQ</a></li>
-                        <li><a href="/contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <a href="/#register" class="btn btn-primary" id="register-btn" data-keep-params="true">Register free</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <div class="page-hero-content">
-                    <h1 class="page-title">Beginner Guide</h1>
-                    <p class="page-subtitle">Everything you need to know to get started with CTF competitions</p>
-                    <div class="page-meta">
-                        <span class="meta-item">📚 Complete Guide</span>
-                        <span class="meta-item">⏱️ 10 min read</span>
-                        <span class="meta-item">🎯 Beginner Friendly</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Content Section -->
-        <section class="page-content">
-            <div class="container">
-                <div class="content-wrapper">
-                    <article class="guide-content">
-                        <h2>What is a CTF?</h2>
-                        <p>Capture The Flag (CTF) competitions are cybersecurity contests where participants solve challenges to find hidden "flags" - usually strings of text that prove you've solved the problem. Think of it as a puzzle game for cybersecurity!</p>
-                        
-                        <h2>Types of Challenges</h2>
-                        <div class="challenge-types">
-                            <div class="challenge-card">
-                                <h3>🌐 Web Security</h3>
-                                <p>Find vulnerabilities in websites and web applications. Learn about SQL injection, XSS, and authentication bypasses.</p>
-                                <ul>
-                                    <li>SQL Injection</li>
-                                    <li>Cross-Site Scripting (XSS)</li>
-                                    <li>Authentication Bypass</li>
-                                    <li>File Upload Vulnerabilities</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="challenge-card">
-                                <h3>🔍 OSINT</h3>
-                                <p>Open Source Intelligence gathering. Use publicly available information to solve puzzles.</p>
-                                <ul>
-                                    <li>Social Media Investigation</li>
-                                    <li>Metadata Analysis</li>
-                                    <li>Google Dorking</li>
-                                    <li>Image Analysis</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="challenge-card">
-                                <h3>🔐 Cryptography</h3>
-                                <p>Decrypt messages, break ciphers, and solve mathematical puzzles.</p>
-                                <ul>
-                                    <li>Caesar Cipher</li>
-                                    <li>Base64 Encoding</li>
-                                    <li>RSA Encryption</li>
-                                    <li>Frequency Analysis</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="challenge-card">
-                                <h3>🔄 Reverse Engineering</h3>
-                                <p>Analyze programs to understand how they work and find hidden functionality.</p>
-                                <ul>
-                                    <li>Static Analysis</li>
-                                    <li>Dynamic Analysis</li>
-                                    <li>Assembly Language</li>
-                                    <li>Debugging</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="challenge-card">
-                                <h3>🔍 Forensics</h3>
-                                <p>Analyze digital evidence to find hidden information and reconstruct events.</p>
-                                <ul>
-                                    <li>File Carving</li>
-                                    <li>Memory Analysis</li>
-                                    <li>Network Traffic Analysis</li>
-                                    <li>Steganography</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="challenge-card">
-                                <h3>🖥️ System Administration</h3>
-                                <p>Configure systems, manage networks, and solve infrastructure problems.</p>
-                                <ul>
-                                    <li>Linux Commands</li>
-                                    <li>Network Configuration</li>
-                                    <li>Service Management</li>
-                                    <li>Log Analysis</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <h2>Essential Tools</h2>
-                        <div class="tools-section">
-                            <h3>Web Security</h3>
-                            <ul>
-                                <li><strong>Burp Suite</strong> - Web application security testing</li>
-                                <li><strong>OWASP ZAP</strong> - Free web application scanner</li>
-                                <li><strong>Browser DevTools</strong> - Built into Chrome/Firefox</li>
-                                <li><strong>Postman</strong> - API testing</li>
-                            </ul>
-                            
-                            <h3>Cryptography</h3>
-                            <ul>
-                                <li><strong>CyberChef</strong> - Swiss Army knife for data analysis</li>
-                                <li><strong>Dcode.fr</strong> - Online cipher decoder</li>
-                                <li><strong>Python</strong> - For custom scripts</li>
-                            </ul>
-                            
-                            <h3>General Tools</h3>
-                            <ul>
-                                <li><strong>Linux Terminal</strong> - Command line interface</li>
-                                <li><strong>Wireshark</strong> - Network protocol analyzer</li>
-                                <li><strong>Ghidra</strong> - Reverse engineering framework</li>
-                                <li><strong>GIMP</strong> - Image analysis and steganography</li>
-                            </ul>
-                        </div>
-                        
-                        <h2>Getting Started Tips</h2>
-                        <div class="tips-section">
-                            <div class="tip-card">
-                                <h3>🎯 Start Simple</h3>
-                                <p>Begin with easy challenges. Don't be discouraged if you can't solve everything immediately.</p>
-                            </div>
-                            
-                            <div class="tip-card">
-                                <h3>📚 Read Everything</h3>
-                                <p>Challenge descriptions often contain hints. Read them carefully and look for hidden clues.</p>
-                            </div>
-                            
-                            <div class="tip-card">
-                                <h3>🔍 Think Outside the Box</h3>
-                                <p>CTF challenges often require creative thinking. Try different approaches and don't give up easily.</p>
-                            </div>
-                            
-                            <div class="tip-card">
-                                <h3>👥 Work with Others</h3>
-                                <p>Join our Discord server to ask questions and collaborate with other participants.</p>
-                            </div>
-                            
-                            <div class="tip-card">
-                                <h3>📝 Take Notes</h3>
-                                <p>Document your solutions and techniques. You'll learn faster and help others.</p>
-                            </div>
-                            
-                            <div class="tip-card">
-                                <h3>🔄 Practice Regularly</h3>
-                                <p>Try other CTF platforms like PicoCTF, OverTheWire, or TryHackMe to build your skills.</p>
-                            </div>
-                        </div>
-                        
-                        <h2>Common Flag Formats</h2>
-                        <p>Flags usually follow these patterns:</p>
-                        <ul>
-                            <li><code>AUCTF{flag_text_here}</code> - Our event format</li>
-                            <li><code>flag{text}</code> - Common format</li>
-                            <li><code>CTF{text}</code> - Another common format</li>
-                            <li>Sometimes just plain text without brackets</li>
-                        </ul>
-                        
-                        <h2>Resources for Learning</h2>
-                        <div class="resources-section">
-                            <h3>Online Platforms</h3>
-                            <ul>
-                                <li><a href="https://picoctf.org" target="_blank">PicoCTF</a> - Beginner-friendly challenges</li>
-                                <li><a href="https://overthewire.org" target="_blank">OverTheWire</a> - Wargames and tutorials</li>
-                                <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a> - Guided learning paths</li>
-                                <li><a href="https://ctftime.org" target="_blank">CTFtime</a> - CTF calendar and writeups</li>
-                            </ul>
-                            
-                            <h3>Learning Materials</h3>
-                            <ul>
-                                <li><a href="https://owasp.org" target="_blank">OWASP</a> - Web application security</li>
-                                <li><a href="https://cryptopals.com" target="_blank">Cryptopals</a> - Cryptography challenges</li>
-                                <li><a href="https://www.youtube.com/c/LiveOverflow" target="_blank">LiveOverflow</a> - YouTube tutorials</li>
-                                <li><a href="https://github.com/ctfs" target="_blank">CTF Writeups</a> - Learn from others' solutions</li>
-                            </ul>
-                        </div>
-                        
-                        <h2>Ready to Start?</h2>
-                        <p>Now that you have the basics, you're ready to tackle the ACUCyS Christmas CTF! Remember:</p>
-                        <ul>
-                            <li>✅ Start with easier challenges</li>
-                            <li>✅ Ask questions in Discord</li>
-                            <li>✅ Take breaks when needed</li>
-                            <li>✅ Have fun and learn!</li>
-                        </ul>
-                        
-                        <div class="cta-section">
-                            <a href="/#register" class="btn btn-primary btn-large">Register for CTF</a>
-                            <a href="https://discord.gg/Cb49NWAaT4" class="btn btn-secondary btn-large">Join Discord</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="/code-of-conduct.html">Code of Conduct</a>
-                    <a href="/privacy.html">Privacy</a>
-                    <a href="/contact.html">Contact</a>
-                </div>
-                <div class="footer-bottom">
-                    <p>Run by ACUCyS CTF volunteers. Free to enter.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/company/acucys" aria-label="LinkedIn">💼</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script>
-    (function() {
-      const keep = ['utm_source','utm_medium','utm_campaign','utm_content','ref'];
-      const url = new URL(window.location.href);
-      const params = new URLSearchParams();
-      keep.forEach(k => { const v = url.searchParams.get(k) || localStorage.getItem('qs_'+k); if (v) { params.set(k, v); localStorage.setItem('qs_'+k, v); }});
-      document.querySelectorAll('a[data-keep-params="true"]').forEach(a => {
-        const href = new URL(a.href, window.location.origin);
-        params.forEach((v,k) => { if (!href.searchParams.has(k)) href.searchParams.set(k, v); });
-        a.href = href.toString();
-      });
-      const bar = document.querySelector('.announcement-bar');
-      const header = document.getElementById('header');
-      const btn = document.querySelector('.announcement-dismiss');
-      function setHeaderOffset(){ if(bar && header){ document.documentElement.style.setProperty('--announcement-offset', bar.offsetHeight+'px'); } }
-      setHeaderOffset();
-      window.addEventListener('resize', setHeaderOffset);
-      if (btn && bar) { btn.addEventListener('click', () => { bar.style.display = 'none'; document.documentElement.style.setProperty('--announcement-offset', '0px'); }); }
-    })();
-    </script>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+		<!-- Open Graph -->
+		<meta property="og:title" content="Beginner Guide • ACUCyS Christmas CTF 2025" />
+		<meta
+			property="og:description"
+			content="Complete beginner guide to CTF competitions. Learn the basics, tools, and strategies to get started with cybersecurity challenges." />
+		<meta property="og:image" content="assets/og-image.jpg" />
+		<meta property="og:url" content="https://acucysctf.org/beginner-guide.html" />
+		<meta property="og:type" content="article" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+	<body>
+		<!-- Skip to content link -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+
+		<!-- Announcement Bar -->
+		<div class="announcement-bar" role="region" aria-label="Announcement">
+			<div class="container">
+				<div class="announcement-content">
+					<span class="announcement-text">Next event: Jingle Shells 2025</span>
+					<a href="/jingleshells.html" class="btn btn-secondary btn-small" data-keep-params="true"
+						>View event</a
+					>
+					<button class="announcement-dismiss" aria-label="Dismiss announcement" title="Dismiss">×</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header-content">
+					<div class="logo">
+						<a href="/">
+							<img src="assets/logo.png" alt="ACUCyS CTF" width="40" height="40" />
+							<span class="logo-text">ACUCyS CTF</span>
+						</a>
+					</div>
+
+					<nav class="nav" aria-label="Main navigation">
+						<ul class="nav-list">
+							<li><a href="/#about" class="nav-link">About</a></li>
+							<li class="nav-item-has-menu">
+								<a href="/jingleshells.html" class="nav-link" data-keep-params="true">Events</a>
+								<div class="nav-menu" role="menu">
+									<a
+										href="/jingleshells"
+										role="menuitem"
+										class="nav-menu-item"
+										data-keep-params="true"
+										>Jingle Shells 2025</a
+									>
+									<a href="/#past-events" role="menuitem" class="nav-menu-item">Past events</a>
+								</div>
+							</li>
+							<li><a href="/#sponsors" class="nav-link">Sponsors</a></li>
+							<li><a href="/#clubs" class="nav-link">Clubs</a></li>
+							<li><a href="/#faq" class="nav-link">FAQ</a></li>
+							<li><a href="/contact.html" class="nav-link">Contact</a></li>
+						</ul>
+					</nav>
+
+					<a href="/#register" class="btn btn-primary" id="register-btn" data-keep-params="true"
+						>Register free</a
+					>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main id="main-content">
+			<!-- Hero Section -->
+			<section class="page-hero">
+				<div class="container">
+					<div class="page-hero-content">
+						<h1 class="page-title">Beginner Guide</h1>
+						<p class="page-subtitle">Everything you need to know to get started with CTF competitions</p>
+						<div class="page-meta">
+							<span class="meta-item">📚 Complete Guide</span>
+							<span class="meta-item">⏱️ 10 min read</span>
+							<span class="meta-item">🎯 Beginner Friendly</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Content Section -->
+			<section class="page-content">
+				<div class="container">
+					<div class="content-wrapper">
+						<article class="guide-content">
+							<h2>What is a CTF?</h2>
+							<p>
+								Capture The Flag (CTF) competitions are cybersecurity contests where participants solve
+								challenges to find hidden "flags" - usually strings of text that prove you've solved the
+								problem. Think of it as a puzzle game for cybersecurity!
+							</p>
+
+							<h2>Types of Challenges</h2>
+							<div class="challenge-types">
+								<div class="challenge-card">
+									<h3>🌐 Web Security</h3>
+									<p>
+										Find vulnerabilities in websites and web applications. Learn about SQL
+										injection, XSS, and authentication bypasses.
+									</p>
+									<ul>
+										<li>SQL Injection</li>
+										<li>Cross-Site Scripting (XSS)</li>
+										<li>Authentication Bypass</li>
+										<li>File Upload Vulnerabilities</li>
+									</ul>
+								</div>
+
+								<div class="challenge-card">
+									<h3>🔍 OSINT</h3>
+									<p>
+										Open Source Intelligence gathering. Use publicly available information to solve
+										puzzles.
+									</p>
+									<ul>
+										<li>Social Media Investigation</li>
+										<li>Metadata Analysis</li>
+										<li>Google Dorking</li>
+										<li>Image Analysis</li>
+									</ul>
+								</div>
+
+								<div class="challenge-card">
+									<h3>🔐 Cryptography</h3>
+									<p>Decrypt messages, break ciphers, and solve mathematical puzzles.</p>
+									<ul>
+										<li>Caesar Cipher</li>
+										<li>Base64 Encoding</li>
+										<li>RSA Encryption</li>
+										<li>Frequency Analysis</li>
+									</ul>
+								</div>
+
+								<div class="challenge-card">
+									<h3>🔄 Reverse Engineering</h3>
+									<p>Analyze programs to understand how they work and find hidden functionality.</p>
+									<ul>
+										<li>Static Analysis</li>
+										<li>Dynamic Analysis</li>
+										<li>Assembly Language</li>
+										<li>Debugging</li>
+									</ul>
+								</div>
+
+								<div class="challenge-card">
+									<h3>🔍 Forensics</h3>
+									<p>Analyze digital evidence to find hidden information and reconstruct events.</p>
+									<ul>
+										<li>File Carving</li>
+										<li>Memory Analysis</li>
+										<li>Network Traffic Analysis</li>
+										<li>Steganography</li>
+									</ul>
+								</div>
+
+								<div class="challenge-card">
+									<h3>🖥️ System Administration</h3>
+									<p>Configure systems, manage networks, and solve infrastructure problems.</p>
+									<ul>
+										<li>Linux Commands</li>
+										<li>Network Configuration</li>
+										<li>Service Management</li>
+										<li>Log Analysis</li>
+									</ul>
+								</div>
+							</div>
+
+							<h2>Essential Tools</h2>
+							<div class="tools-section">
+								<h3>Web Security</h3>
+								<ul>
+									<li><strong>Burp Suite</strong> - Web application security testing</li>
+									<li><strong>OWASP ZAP</strong> - Free web application scanner</li>
+									<li><strong>Browser DevTools</strong> - Built into Chrome/Firefox</li>
+									<li><strong>Postman</strong> - API testing</li>
+								</ul>
+
+								<h3>Cryptography</h3>
+								<ul>
+									<li><strong>CyberChef</strong> - Swiss Army knife for data analysis</li>
+									<li><strong>Dcode.fr</strong> - Online cipher decoder</li>
+									<li><strong>Python</strong> - For custom scripts</li>
+								</ul>
+
+								<h3>General Tools</h3>
+								<ul>
+									<li><strong>Linux Terminal</strong> - Command line interface</li>
+									<li><strong>Wireshark</strong> - Network protocol analyzer</li>
+									<li><strong>Ghidra</strong> - Reverse engineering framework</li>
+									<li><strong>GIMP</strong> - Image analysis and steganography</li>
+								</ul>
+							</div>
+
+							<h2>Getting Started Tips</h2>
+							<div class="tips-section">
+								<div class="tip-card">
+									<h3>🎯 Start Simple</h3>
+									<p>
+										Begin with easy challenges. Don't be discouraged if you can't solve everything
+										immediately.
+									</p>
+								</div>
+
+								<div class="tip-card">
+									<h3>📚 Read Everything</h3>
+									<p>
+										Challenge descriptions often contain hints. Read them carefully and look for
+										hidden clues.
+									</p>
+								</div>
+
+								<div class="tip-card">
+									<h3>🔍 Think Outside the Box</h3>
+									<p>
+										CTF challenges often require creative thinking. Try different approaches and
+										don't give up easily.
+									</p>
+								</div>
+
+								<div class="tip-card">
+									<h3>👥 Work with Others</h3>
+									<p>
+										Join our Discord server to ask questions and collaborate with other
+										participants.
+									</p>
+								</div>
+
+								<div class="tip-card">
+									<h3>📝 Take Notes</h3>
+									<p>Document your solutions and techniques. You'll learn faster and help others.</p>
+								</div>
+
+								<div class="tip-card">
+									<h3>🔄 Practice Regularly</h3>
+									<p>
+										Try other CTF platforms like PicoCTF, OverTheWire, or TryHackMe to build your
+										skills.
+									</p>
+								</div>
+							</div>
+
+							<h2>Common Flag Formats</h2>
+							<p>Flags usually follow these patterns:</p>
+							<ul>
+								<li><code>AUCTF{flag_text_here}</code> - Our event format</li>
+								<li><code>flag{text}</code> - Common format</li>
+								<li><code>CTF{text}</code> - Another common format</li>
+								<li>Sometimes just plain text without brackets</li>
+							</ul>
+
+							<h2>Resources for Learning</h2>
+							<div class="resources-section">
+								<h3>Online Platforms</h3>
+								<ul>
+									<li>
+										<a href="https://picoctf.org" target="_blank">PicoCTF</a> - Beginner-friendly
+										challenges
+									</li>
+									<li>
+										<a href="https://overthewire.org" target="_blank">OverTheWire</a> - Wargames and
+										tutorials
+									</li>
+									<li>
+										<a href="https://tryhackme.com" target="_blank">TryHackMe</a> - Guided learning
+										paths
+									</li>
+									<li>
+										<a href="https://ctftime.org" target="_blank">CTFtime</a> - CTF calendar and
+										writeups
+									</li>
+								</ul>
+
+								<h3>Learning Materials</h3>
+								<ul>
+									<li>
+										<a href="https://owasp.org" target="_blank">OWASP</a> - Web application security
+									</li>
+									<li>
+										<a href="https://cryptopals.com" target="_blank">Cryptopals</a> - Cryptography
+										challenges
+									</li>
+									<li>
+										<a href="https://www.youtube.com/c/LiveOverflow" target="_blank"
+											>LiveOverflow</a
+										>
+										- YouTube tutorials
+									</li>
+									<li>
+										<a href="https://github.com/ctfs" target="_blank">CTF Writeups</a> - Learn from
+										others' solutions
+									</li>
+								</ul>
+							</div>
+
+							<h2>Ready to Start?</h2>
+							<p>
+								Now that you have the basics, you're ready to tackle the ACUCyS Christmas CTF! Remember:
+							</p>
+							<ul>
+								<li>✅ Start with easier challenges</li>
+								<li>✅ Ask questions in Discord</li>
+								<li>✅ Take breaks when needed</li>
+								<li>✅ Have fun and learn!</li>
+							</ul>
+
+							<div class="cta-section">
+								<a href="/#register" class="btn btn-primary btn-large">Register for CTF</a>
+								<a href="https://discord.gg/Cb49NWAaT4" class="btn btn-secondary btn-large"
+									>Join Discord</a
+								>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-links">
+						<a href="/code-of-conduct.html">Code of Conduct</a>
+						<a href="/privacy.html">Privacy</a>
+						<a href="/contact.html">Contact</a>
+					</div>
+					<div class="footer-bottom">
+						<p>Run by ACUCyS CTF volunteers. Free to enter.</p>
+						<div class="social-links">
+							<a href="https://linkedin.com/company/acucys" aria-label="LinkedIn">💼</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script>
+			(function () {
+				const keep = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "ref"];
+				const url = new URL(window.location.href);
+				const params = new URLSearchParams();
+				keep.forEach((k) => {
+					const v = url.searchParams.get(k) || localStorage.getItem("qs_" + k);
+					if (v) {
+						params.set(k, v);
+						localStorage.setItem("qs_" + k, v);
+					}
+				});
+				document.querySelectorAll('a[data-keep-params="true"]').forEach((a) => {
+					const href = new URL(a.href, window.location.origin);
+					params.forEach((v, k) => {
+						if (!href.searchParams.has(k)) href.searchParams.set(k, v);
+					});
+					a.href = href.toString();
+				});
+				const bar = document.querySelector(".announcement-bar");
+				const header = document.getElementById("header");
+				const btn = document.querySelector(".announcement-dismiss");
+				function setHeaderOffset() {
+					if (bar && header) {
+						document.documentElement.style.setProperty("--announcement-offset", bar.offsetHeight + "px");
+					}
+				}
+				setHeaderOffset();
+				window.addEventListener("resize", setHeaderOffset);
+				if (btn && bar) {
+					btn.addEventListener("click", () => {
+						bar.style.display = "none";
+						document.documentElement.style.setProperty("--announcement-offset", "0px");
+					});
+				}
+			})();
+		</script>
+		<script src="assets/js/theme.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>

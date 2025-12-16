@@ -1,2 +1,0 @@
-[license]
-IOU3 = 36c61e92bbf9cb56;
