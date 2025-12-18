@@ -2,84 +2,84 @@
 // Handles the preview challenge interaction and sharing
 
 class TeaserChallenge {
-  constructor() {
-    this.challenge = {
-      question: "What's the most common password in the world? (Hint: it's not 'password')",
-      answer: "123456",
-      alternatives: ["password", "admin", "qwerty", "letmein", "welcome"]
-    };
-    
-    this.isSolved = false;
-    this.init();
-  }
+	constructor() {
+		this.challenge = {
+			question: "What's the most common password in the world? (Hint: it's not 'password')",
+			answer: "123456",
+			alternatives: ["password", "admin", "qwerty", "letmein", "welcome"],
+		};
 
-  init() {
-    this.setupTeaserInteraction();
-    this.loadPreviousState();
-  }
+		this.isSolved = false;
+		this.init();
+	}
 
-  setupTeaserInteraction() {
-    const submitBtn = document.getElementById('teaser-submit');
-    const answerInput = document.getElementById('teaser-answer');
-    const resultDiv = document.getElementById('teaser-result');
-    
-    if (!submitBtn || !answerInput || !resultDiv) return;
+	init() {
+		this.setupTeaserInteraction();
+		this.loadPreviousState();
+	}
 
-    // Handle form submission
-    submitBtn.addEventListener('click', () => this.handleSubmission());
-    
-    // Handle Enter key
-    answerInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        this.handleSubmission();
-      }
-    });
+	setupTeaserInteraction() {
+		const submitBtn = document.getElementById("teaser-submit");
+		const answerInput = document.getElementById("teaser-answer");
+		const resultDiv = document.getElementById("teaser-result");
 
-    // Clear result when user starts typing
-    answerInput.addEventListener('input', () => {
-      if (resultDiv.style.display !== 'none') {
-        this.clearResult();
-      }
-    });
-  }
+		if (!submitBtn || !answerInput || !resultDiv) return;
 
-  handleSubmission() {
-    const answerInput = document.getElementById('teaser-answer');
-    const resultDiv = document.getElementById('teaser-result');
-    
-    if (!answerInput || !resultDiv) return;
+		// Handle form submission
+		submitBtn.addEventListener("click", () => this.handleSubmission());
 
-    const userAnswer = answerInput.value.trim().toLowerCase();
-    const isCorrect = this.checkAnswer(userAnswer);
-    
-    if (isCorrect) {
-      this.showSuccess();
-      this.trackSolve();
-    } else {
-      this.showError();
-    }
-  }
+		// Handle Enter key
+		answerInput.addEventListener("keypress", (e) => {
+			if (e.key === "Enter") {
+				this.handleSubmission();
+			}
+		});
 
-  checkAnswer(userAnswer) {
-    const correctAnswer = this.challenge.answer.toLowerCase();
-    const alternatives = this.challenge.alternatives.map(alt => alt.toLowerCase());
-    
-    // Check exact match or alternatives
-    return userAnswer === correctAnswer || alternatives.includes(userAnswer);
-  }
+		// Clear result when user starts typing
+		answerInput.addEventListener("input", () => {
+			if (resultDiv.style.display !== "none") {
+				this.clearResult();
+			}
+		});
+	}
 
-  showSuccess() {
-    const resultDiv = document.getElementById('teaser-result');
-    const answerInput = document.getElementById('teaser-answer');
-    const submitBtn = document.getElementById('teaser-submit');
-    
-    if (!resultDiv) return;
+	handleSubmission() {
+		const answerInput = document.getElementById("teaser-answer");
+		const resultDiv = document.getElementById("teaser-result");
 
-    this.isSolved = true;
-    this.saveState();
-    
-    resultDiv.className = 'teaser-result success';
-    resultDiv.innerHTML = `
+		if (!answerInput || !resultDiv) return;
+
+		const userAnswer = answerInput.value.trim().toLowerCase();
+		const isCorrect = this.checkAnswer(userAnswer);
+
+		if (isCorrect) {
+			this.showSuccess();
+			this.trackSolve();
+		} else {
+			this.showError();
+		}
+	}
+
+	checkAnswer(userAnswer) {
+		const correctAnswer = this.challenge.answer.toLowerCase();
+		const alternatives = this.challenge.alternatives.map((alt) => alt.toLowerCase());
+
+		// Check exact match or alternatives
+		return userAnswer === correctAnswer || alternatives.includes(userAnswer);
+	}
+
+	showSuccess() {
+		const resultDiv = document.getElementById("teaser-result");
+		const answerInput = document.getElementById("teaser-answer");
+		const submitBtn = document.getElementById("teaser-submit");
+
+		if (!resultDiv) return;
+
+		this.isSolved = true;
+		this.saveState();
+
+		resultDiv.className = "teaser-result success";
+		resultDiv.innerHTML = `
       <div class="success-content">
         <div class="success-icon">🎉</div>
         <h4>Well done!</h4>
@@ -90,139 +90,142 @@ class TeaserChallenge {
         </div>
       </div>
     `;
-    resultDiv.style.display = 'block';
-    
-    // Disable input and button
-    if (answerInput) answerInput.disabled = true;
-    if (submitBtn) submitBtn.disabled = true;
-    
-    // Setup share functionality
-    this.setupShareButton();
-    
-    // Show toast
-    if (typeof showToast === 'function') {
-      showToast('Challenge solved! Great work!');
-    }
-  }
+		resultDiv.style.display = "block";
 
-  showError() {
-    const resultDiv = document.getElementById('teaser-result');
-    
-    if (!resultDiv) return;
+		// Disable input and button
+		if (answerInput) answerInput.disabled = true;
+		if (submitBtn) submitBtn.disabled = true;
 
-    resultDiv.className = 'teaser-result error';
-    resultDiv.innerHTML = `
+		// Setup share functionality
+		this.setupShareButton();
+
+		// Show toast
+		if (typeof showToast === "function") {
+			showToast("Challenge solved! Great work!");
+		}
+	}
+
+	showError() {
+		const resultDiv = document.getElementById("teaser-result");
+
+		if (!resultDiv) return;
+
+		resultDiv.className = "teaser-result error";
+		resultDiv.innerHTML = `
       <div class="error-content">
         <div class="error-icon">🤔</div>
         <h4>Not quite right</h4>
         <p>Try again! Think about the most commonly used passwords.</p>
       </div>
     `;
-    resultDiv.style.display = 'block';
-    
-    // Auto-hide after 3 seconds
-    setTimeout(() => {
-      this.clearResult();
-    }, 3000);
-  }
+		resultDiv.style.display = "block";
 
-  clearResult() {
-    const resultDiv = document.getElementById('teaser-result');
-    if (resultDiv) {
-      resultDiv.style.display = 'none';
-      resultDiv.className = 'teaser-result';
-      resultDiv.innerHTML = '';
-    }
-  }
+		// Auto-hide after 3 seconds
+		setTimeout(() => {
+			this.clearResult();
+		}, 3000);
+	}
 
-  setupShareButton() {
-    const shareBtn = document.getElementById('share-success');
-    if (shareBtn) {
-      shareBtn.addEventListener('click', () => this.shareSuccess());
-    }
-  }
+	clearResult() {
+		const resultDiv = document.getElementById("teaser-result");
+		if (resultDiv) {
+			resultDiv.style.display = "none";
+			resultDiv.className = "teaser-result";
+			resultDiv.innerHTML = "";
+		}
+	}
 
-  shareSuccess() {
-    const shareUrl = this.generateShareUrl();
-    const shareText = `I just solved the ACUCyS Christmas CTF teaser challenge! 🎉 Join me for the full competition: ${shareUrl}`;
-    
-    // Try to use Web Share API if available
-    if (navigator.share) {
-      navigator.share({
-        title: 'ACUCyS Christmas CTF 2025',
-        text: shareText,
-        url: shareUrl
-      }).then(() => {
-        this.trackShare();
-      }).catch(() => {
-        this.fallbackShare(shareText, shareUrl);
-      });
-    } else {
-      this.fallbackShare(shareText, shareUrl);
-    }
-  }
+	setupShareButton() {
+		const shareBtn = document.getElementById("share-success");
+		if (shareBtn) {
+			shareBtn.addEventListener("click", () => this.shareSuccess());
+		}
+	}
 
-  fallbackShare(text, url) {
-    // Copy to clipboard
-    if (typeof copyToClipboard === 'function') {
-      copyToClipboard(text);
-    } else {
-      // Fallback to prompt
-      prompt('Copy this message to share:', text);
-    }
-    
-    this.trackShare();
-  }
+	shareSuccess() {
+		const shareUrl = this.generateShareUrl();
+		const shareText = `I just solved the ACUCyS Christmas CTF teaser challenge! 🎉 Join me for the full competition: ${shareUrl}`;
 
-  generateShareUrl() {
-    const baseUrl = window.location.origin;
-    const referralCode = localStorage.getItem('ctf_referral');
-    
-    let shareUrl = baseUrl;
-    if (referralCode) {
-      shareUrl += `?ref=${referralCode}`;
-    }
-    
-    return shareUrl;
-  }
+		// Try to use Web Share API if available
+		if (navigator.share) {
+			navigator
+				.share({
+					title: "ACUCyS Christmas CTF 2025",
+					text: shareText,
+					url: shareUrl,
+				})
+				.then(() => {
+					this.trackShare();
+				})
+				.catch(() => {
+					this.fallbackShare(shareText, shareUrl);
+				});
+		} else {
+			this.fallbackShare(shareText, shareUrl);
+		}
+	}
 
-  trackSolve() {
-    // Track teaser solve event
-    if (typeof Analytics !== 'undefined') {
-      new Analytics().track('teaser_solve');
-    }
-  }
+	fallbackShare(text, url) {
+		// Copy to clipboard
+		if (typeof copyToClipboard === "function") {
+			copyToClipboard(text);
+		} else {
+			// Fallback to prompt
+			prompt("Copy this message to share:", text);
+		}
 
-  trackShare() {
-    // Track share event
-    if (typeof Analytics !== 'undefined') {
-      new Analytics().track('teaser_share');
-    }
-  }
+		this.trackShare();
+	}
 
-  saveState() {
-    localStorage.setItem('ctf_teaser_solved', 'true');
-    localStorage.setItem('ctf_teaser_solve_time', new Date().toISOString());
-  }
+	generateShareUrl() {
+		const baseUrl = window.location.origin;
+		const referralCode = localStorage.getItem("ctf_referral");
 
-  loadPreviousState() {
-    const isSolved = localStorage.getItem('ctf_teaser_solved') === 'true';
-    
-    if (isSolved) {
-      this.isSolved = true;
-      this.showPreviousSuccess();
-    }
-  }
+		let shareUrl = baseUrl;
+		if (referralCode) {
+			shareUrl += `?ref=${referralCode}`;
+		}
 
-  showPreviousSuccess() {
-    const resultDiv = document.getElementById('teaser-result');
-    const answerInput = document.getElementById('teaser-answer');
-    const submitBtn = document.getElementById('teaser-submit');
-    
-    if (!resultDiv) return;
+		return shareUrl;
+	}
 
-    resultDiv.className = 'teaser-result success';
-    resultDiv.innerHTML = `
+	trackSolve() {
+		// Track teaser solve event
+		if (typeof Analytics !== "undefined") {
+			new Analytics().track("teaser_solve");
+		}
+	}
+
+	trackShare() {
+		// Track share event
+		if (typeof Analytics !== "undefined") {
+			new Analytics().track("teaser_share");
+		}
+	}
+
+	saveState() {
+		localStorage.setItem("ctf_teaser_solved", "true");
+		localStorage.setItem("ctf_teaser_solve_time", new Date().toISOString());
+	}
+
+	loadPreviousState() {
+		const isSolved = localStorage.getItem("ctf_teaser_solved") === "true";
+
+		if (isSolved) {
+			this.isSolved = true;
+			this.showPreviousSuccess();
+		}
+	}
+
+	showPreviousSuccess() {
+		const resultDiv = document.getElementById("teaser-result");
+		const answerInput = document.getElementById("teaser-answer");
+		const submitBtn = document.getElementById("teaser-submit");
+
+		if (!resultDiv) return;
+
+		resultDiv.className = "teaser-result success";
+		resultDiv.innerHTML = `
       <div class="success-content">
         <div class="success-icon">✅</div>
         <h4>Already solved!</h4>
@@ -233,41 +236,41 @@ class TeaserChallenge {
         </div>
       </div>
     `;
-    resultDiv.style.display = 'block';
-    
-    // Disable input and button
-    if (answerInput) answerInput.disabled = true;
-    if (submitBtn) submitBtn.disabled = true;
-    
-    // Setup share functionality
-    this.setupShareButton();
-  }
+		resultDiv.style.display = "block";
 
-  // Public method to reset challenge (for testing)
-  resetChallenge() {
-    this.isSolved = false;
-    localStorage.removeItem('ctf_teaser_solved');
-    localStorage.removeItem('ctf_teaser_solve_time');
-    
-    const resultDiv = document.getElementById('teaser-result');
-    const answerInput = document.getElementById('teaser-answer');
-    const submitBtn = document.getElementById('teaser-submit');
-    
-    if (resultDiv) {
-      resultDiv.style.display = 'none';
-      resultDiv.className = 'teaser-result';
-      resultDiv.innerHTML = '';
-    }
-    
-    if (answerInput) {
-      answerInput.disabled = false;
-      answerInput.value = '';
-    }
-    
-    if (submitBtn) {
-      submitBtn.disabled = false;
-    }
-  }
+		// Disable input and button
+		if (answerInput) answerInput.disabled = true;
+		if (submitBtn) submitBtn.disabled = true;
+
+		// Setup share functionality
+		this.setupShareButton();
+	}
+
+	// Public method to reset challenge (for testing)
+	resetChallenge() {
+		this.isSolved = false;
+		localStorage.removeItem("ctf_teaser_solved");
+		localStorage.removeItem("ctf_teaser_solve_time");
+
+		const resultDiv = document.getElementById("teaser-result");
+		const answerInput = document.getElementById("teaser-answer");
+		const submitBtn = document.getElementById("teaser-submit");
+
+		if (resultDiv) {
+			resultDiv.style.display = "none";
+			resultDiv.className = "teaser-result";
+			resultDiv.innerHTML = "";
+		}
+
+		if (answerInput) {
+			answerInput.disabled = false;
+			answerInput.value = "";
+		}
+
+		if (submitBtn) {
+			submitBtn.disabled = false;
+		}
+	}
 }
 
 // Add CSS for teaser challenge
@@ -311,11 +314,11 @@ const teaserCSS = `
 `;
 
 // Inject CSS
-const teaserStyle = document.createElement('style');
+const teaserStyle = document.createElement("style");
 teaserStyle.textContent = teaserCSS;
 document.head.appendChild(teaserStyle);
 
 // Export for module usage
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = TeaserChallenge;
+if (typeof module !== "undefined" && module.exports) {
+	module.exports = TeaserChallenge;
 }

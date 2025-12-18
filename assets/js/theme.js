@@ -2,134 +2,134 @@
 // Handles light/dark theme switching and system preference detection
 
 class ThemeManager {
-  constructor() {
-    this.currentTheme = null;
-    this.init();
-  }
+	constructor() {
+		this.currentTheme = null;
+		this.init();
+	}
 
-  init() {
-    this.detectSystemPreference();
-    this.loadSavedTheme();
-    this.setupThemeToggle();
-    this.setupSystemPreferenceListener();
-  }
+	init() {
+		this.detectSystemPreference();
+		this.loadSavedTheme();
+		this.setupThemeToggle();
+		this.setupSystemPreferenceListener();
+	}
 
-  detectSystemPreference() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
-  }
+	detectSystemPreference() {
+		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+		return prefersDark ? "dark" : "light";
+	}
 
-  loadSavedTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPreference = this.detectSystemPreference();
-    
-    if (savedTheme) {
-      this.setTheme(savedTheme);
-    } else {
-      this.setTheme(systemPreference);
-    }
-  }
+	loadSavedTheme() {
+		const savedTheme = localStorage.getItem("theme");
+		const systemPreference = this.detectSystemPreference();
 
-  setTheme(theme) {
-    this.currentTheme = theme;
-    
-    // Remove existing theme classes
-    document.documentElement.classList.remove('light-theme', 'dark-theme');
-    
-    // Add new theme class
-    document.documentElement.classList.add(`${theme}-theme`);
-    
-    // Save to localStorage
-    localStorage.setItem('theme', theme);
-    
-    // Update theme toggle button if it exists
-    this.updateThemeToggleButton();
-    
-    // Dispatch theme change event
-    this.dispatchThemeChangeEvent(theme);
-  }
+		if (savedTheme) {
+			this.setTheme(savedTheme);
+		} else {
+			this.setTheme(systemPreference);
+		}
+	}
 
-  toggleTheme() {
-    const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-    this.setTheme(newTheme);
-  }
+	setTheme(theme) {
+		this.currentTheme = theme;
 
-  setupThemeToggle() {
-    // Create theme toggle button if it doesn't exist
-    this.createThemeToggleButton();
-  }
+		// Remove existing theme classes
+		document.documentElement.classList.remove("light-theme", "dark-theme");
 
-  createThemeToggleButton() {
-    // Check if toggle already exists
-    if (document.getElementById('theme-toggle')) return;
-    
-    const toggle = document.createElement('button');
-    toggle.id = 'theme-toggle';
-    toggle.className = 'theme-toggle';
-    toggle.setAttribute('aria-label', 'Toggle theme');
-    toggle.innerHTML = this.getThemeIcon();
-    
-    // Add to header
-    const header = document.querySelector('.header-content');
-    if (header) {
-      header.appendChild(toggle);
-    }
-    
-    // Add event listener
-    toggle.addEventListener('click', () => this.toggleTheme());
-  }
+		// Add new theme class
+		document.documentElement.classList.add(`${theme}-theme`);
 
-  getThemeIcon() {
-    return this.currentTheme === 'light' ? '🌙' : '☀️';
-  }
+		// Save to localStorage
+		localStorage.setItem("theme", theme);
 
-  updateThemeToggleButton() {
-    const toggle = document.getElementById('theme-toggle');
-    if (toggle) {
-      toggle.innerHTML = this.getThemeIcon();
-      toggle.setAttribute('aria-label', `Switch to ${this.currentTheme === 'light' ? 'dark' : 'light'} theme`);
-    }
-  }
+		// Update theme toggle button if it exists
+		this.updateThemeToggleButton();
 
-  setupSystemPreferenceListener() {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    mediaQuery.addEventListener('change', (e) => {
-      // Only update if user hasn't manually set a preference
-      const savedTheme = localStorage.getItem('theme');
-      if (!savedTheme) {
-        const newTheme = e.matches ? 'dark' : 'light';
-        this.setTheme(newTheme);
-      }
-    });
-  }
+		// Dispatch theme change event
+		this.dispatchThemeChangeEvent(theme);
+	}
 
-  dispatchThemeChangeEvent(theme) {
-    const event = new CustomEvent('themechange', {
-      detail: { theme }
-    });
-    document.dispatchEvent(event);
-  }
+	toggleTheme() {
+		const newTheme = this.currentTheme === "light" ? "dark" : "light";
+		this.setTheme(newTheme);
+	}
 
-  // Public methods
-  getCurrentTheme() {
-    return this.currentTheme;
-  }
+	setupThemeToggle() {
+		// Create theme toggle button if it doesn't exist
+		this.createThemeToggleButton();
+	}
 
-  isDarkTheme() {
-    return this.currentTheme === 'dark';
-  }
+	createThemeToggleButton() {
+		// Check if toggle already exists
+		if (document.getElementById("theme-toggle")) return;
 
-  isLightTheme() {
-    return this.currentTheme === 'light';
-  }
+		const toggle = document.createElement("button");
+		toggle.id = "theme-toggle";
+		toggle.className = "theme-toggle";
+		toggle.setAttribute("aria-label", "Toggle theme");
+		toggle.innerHTML = this.getThemeIcon();
 
-  // Reset to system preference
-  resetToSystemPreference() {
-    localStorage.removeItem('theme');
-    const systemPreference = this.detectSystemPreference();
-    this.setTheme(systemPreference);
-  }
+		// Add to header
+		const header = document.querySelector(".header-content");
+		if (header) {
+			header.appendChild(toggle);
+		}
+
+		// Add event listener
+		toggle.addEventListener("click", () => this.toggleTheme());
+	}
+
+	getThemeIcon() {
+		return this.currentTheme === "light" ? "🌙" : "☀️";
+	}
+
+	updateThemeToggleButton() {
+		const toggle = document.getElementById("theme-toggle");
+		if (toggle) {
+			toggle.innerHTML = this.getThemeIcon();
+			toggle.setAttribute("aria-label", `Switch to ${this.currentTheme === "light" ? "dark" : "light"} theme`);
+		}
+	}
+
+	setupSystemPreferenceListener() {
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+		mediaQuery.addEventListener("change", (e) => {
+			// Only update if user hasn't manually set a preference
+			const savedTheme = localStorage.getItem("theme");
+			if (!savedTheme) {
+				const newTheme = e.matches ? "dark" : "light";
+				this.setTheme(newTheme);
+			}
+		});
+	}
+
+	dispatchThemeChangeEvent(theme) {
+		const event = new CustomEvent("themechange", {
+			detail: { theme },
+		});
+		document.dispatchEvent(event);
+	}
+
+	// Public methods
+	getCurrentTheme() {
+		return this.currentTheme;
+	}
+
+	isDarkTheme() {
+		return this.currentTheme === "dark";
+	}
+
+	isLightTheme() {
+		return this.currentTheme === "light";
+	}
+
+	// Reset to system preference
+	resetToSystemPreference() {
+		localStorage.removeItem("theme");
+		const systemPreference = this.detectSystemPreference();
+		this.setTheme(systemPreference);
+	}
 }
 
 // Add CSS for theme toggle button
@@ -169,7 +169,7 @@ const themeToggleCSS = `
 `;
 
 // Inject CSS
-const themeStyle = document.createElement('style');
+const themeStyle = document.createElement("style");
 themeStyle.textContent = themeToggleCSS;
 document.head.appendChild(themeStyle);
 
@@ -177,6 +177,6 @@ document.head.appendChild(themeStyle);
 const themeManager = new ThemeManager();
 
 // Export for module usage
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ThemeManager;
+if (typeof module !== "undefined" && module.exports) {
+	module.exports = ThemeManager;
 }

@@ -1,167 +1,178 @@
 {
-  
-  "eventName": "ACUCyS Christmas CTF 2025",
-  "tagline": "Student-built. Free to join. Beginner friendly.",
-  "start": "2025-12-20T09:00:00+11:00",
-  "end": "2025-12-21T21:00:00+11:00",
-  "timezone": "Australia/Melbourne",
-  "discordUrl": "https://discord.gg/WZAHJ66gPg",
-  "beginnerGuideUrl": "/beginner-guide",
-  "whatIsCtfUrl": "/what-is-a-ctf",
-  "clubs": [
-    {
-      "name": "Deakin Cybersecurity Club",
-      "campus": "Deakin University",
-      "url": "https://deakin.edu.au",
-      "logo": "/assets/clubs/deakin.png"
-    },
-    {
-      "name": "ECU Security Society",
-      "campus": "Edith Cowan University",
-      "url": "https://ecu.edu.au",
-      "logo": "/assets/clubs/ecu.png"
-    },
-    {
-      "name": "Griffith Cybersecurity",
-      "campus": "Griffith University",
-      "url": "https://griffith.edu.au",
-      "logo": "/assets/clubs/griffith.png"
-    },
-    {
-      "name": "Macquarie Security",
-      "campus": "Macquarie University",
-      "url": "https://mq.edu.au",
-      "logo": "/assets/clubs/macquarie.png"
-    },
-    {
-      "name": "Monash Cybersecurity",
-      "campus": "Monash University",
-      "url": "https://monashcyber.org",
-      "logo": "/assets/clubs/monash.png"
-    },
-    {
-      "name": "AdelaideB9",
-      "campus": "University of Adelaide",
-      "url": "https://adelaideb9.com/",
-      "logo": "/assets/clubs/adelaide.png"
-    },
-    {
-      "name": "Melbourne Cybersecurity",
-      "campus": "University of Melbourne",
-      "url": "https://unimelb.edu.au",
-      "logo": "/assets/clubs/melbourne.png"
-    },
-    {
-      "name": "UNSW Security Society",
-      "campus": "University of New South Wales",
-      "url": "https://unswsecurity.com",
-      "logo": "/assets/clubs/unsw.png"
-    },
-    {
-      "name": "UQ Cyber",
-      "campus": "University of Queensland",
-      "url": "https://uqcyber.org",
-      "logo": "/assets/clubs/uq.png"
-    },
-    {
-      "name": "Sydney Security",
-      "campus": "University of Sydney",
-      "url": "https://sydney.edu.au",
-      "logo": "/assets/clubs/sydney.png"
-    },
-    {
-      "name": "UTS Security",
-      "campus": "University of Technology Sydney",
-      "url": "https://utssecurity.org",
-      "logo": "/assets/clubs/uts.png"
-    },
-    {
-      "name": "UNE Cybersecurity",
-      "campus": "University of New England",
-      "url": "https://une.edu.au",
-      "logo": "/assets/clubs/une.png"
-    },
-    {
-      "name": "UWA Security",
-      "campus": "University of Western Australia",
-      "url": "https://uwasecurity.org",
-      "logo": "/assets/clubs/uwa.png"
-    }
-  ],
-  "sponsors": [
-    {
-      "name": "Legion Offensive Security",
-      "url": "https://legionoffensivesecurity.com",
-      "logo": "/assets/sponsors/LEGION.png",
-      "description": "TRANSFORMING CULTURE, STRENGTHENING SECURITY."
-    }
-  ],
-  "faqs": [
-    {
-      "q": "Who can join?",
-      "a": "Australian uni and TAFE students, recent grads, and early-career participants. International students studying in Australia are also welcome!"
-    },
-    {
-      "q": "Do I need experience?",
-      "a": "No experience required! We have a beginner route with guided challenges and mentors available throughout the event."
-    },
-    {
-      "q": "How do teams work?",
-      "a": "Teams can have up to 4 players. You can register solo and find a team later, or register with your existing team."
-    },
-    {
-      "q": "What do I need?",
-      "a": "Just a laptop, internet connection, and a modern browser. No special software required!"
-    },
-    {
-      "q": "Is it free?",
-      "a": "Yes, completely free! No hidden costs or premium tiers."
-    },
-    {
-      "q": "How do I prepare?",
-      "a": "Read our beginner guide, try the teaser challenge, and join our Discord for tips and community support."
-    },
-    {
-      "q": "Will there be prizes?",
-      "a": "Yes! We have prizes for top teams and individuals, plus recognition for all participants. Details announced closer to the event."
-    },
-    {
-      "q": "What time zones are supported?",
-      "a": "The event runs in Australian Eastern Daylight Time (AEDT). We provide time zone converters and schedule information for all participants."
-    },
-    {
-      "q": "Can I participate from overseas?",
-      "a": "The event is designed for Australian students, but international participants are welcome if they meet the eligibility criteria."
-    },
-    {
-      "q": "What if I get stuck?",
-      "a": "Our mentor team is available throughout the event via Discord. We also provide hints and beginner-friendly resources."
-    }
-  ],
-  "teaserChallenge": {
-    "question": "What's the most common password in the world? (Hint: it's not 'password')",
-    "answer": "123456",
-    "alternatives": ["password", "admin", "qwerty", "letmein", "welcome", "123456789", "12345678", "12345"]
-  },
-  "socialProof": {
-    "quotes": [
-      {
-        "text": "The best CTF I've participated in. Great community and challenging problems!",
-        "author": "Sarah Chen",
-        "university": "UNSW Sydney"
-      },
-      {
-        "text": "Perfect for beginners like me. The mentors were incredibly helpful.",
-        "author": "Alex Thompson",
-        "university": "Monash University"
-      }
-    ]
-  },
-  "meta": {
-    "description": "Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.",
-    "keywords": "CTF, cybersecurity, competition, students, Australia, capture the flag, hacking, security",
-    "author": "ACUCyS",
-    "ogImage": "/assets/og-image.jpg",
-    "twitterHandle": "@acucys"
-  }
+	"eventName": "ACUCyS Christmas CTF 2025",
+	"tagline": "Student-built. Free to join. Beginner friendly.",
+	"start": "2025-12-20T09:00:00+11:00",
+	"end": "2025-12-21T21:00:00+11:00",
+	"timezone": "Australia/Melbourne",
+	"discordUrl": "https://discord.gg/WZAHJ66gPg",
+	"beginnerGuideUrl": "/beginner-guide",
+	"whatIsCtfUrl": "/what-is-a-ctf",
+	"clubs": [
+		{
+			"name": "DUCA",
+			"campus": "Deakin University",
+			"url": "https://duca.au",
+			"logo": "assets/clubs/duca.png"
+		},
+		{
+			"name": "DSEC",
+			"campus": "Deakin University",
+			"url": "https://linktr.ee/DeakinSEC",
+			"logo": "assets/clubs/dsec.png"
+		},
+		{
+			"name": "AdelaideB9",
+			"campus": "University of Adelaide",
+			"url": "https://adelaideb9.com/",
+			"logo": "assets/clubs/b9.png"
+		},
+		{
+			"name": "Computing & Security Student Association",
+			"campus": "Edith Cowan University",
+			"url": "https://cassa.au",
+			"logo": "assets/clubs/ecu.png"
+		},
+		{
+			"name": "LTUCS",
+			"campus": "La Trobe University",
+			"url": "https://www.linkedin.com/company/la-trobe-university-cybersecurity-club-csc",
+			"logo": "assets/clubs/ltu.jpg"
+		},
+		{
+			"name": "MQCyberSec Club",
+			"campus": "Macquarie University",
+			"url": "https://mqcybersec.org",
+			"logo": "assets/clubs/mq.webp"
+		},
+		{
+			"name": "MonSec",
+			"campus": "Monash University",
+			"url": "https://monsec.io",
+			"logo": "assets/clubs/monsec.png"
+		},
+		{
+			"name": "MISC",
+			"campus": "University of Melbourne",
+			"url": "https://www.umisc.club",
+			"logo": "assets/clubs/misc.png"
+		},
+		{
+			"name": "RISC",
+			"campus": "RMIT",
+			"url": "https://www.linkedin.com/company/rmit-information-security-collective",
+			"logo": "assets/clubs/risc.png"
+		},
+		{
+			"name": "SCSC",
+			"campus": "Swinburne University",
+			"url": "https://www.linkedin.com/company/swinburnecyber",
+			"logo": "assets/clubs/scsc.png"
+		},
+		{
+			"name": "UNSW Security Society",
+			"campus": "University of New South Wales",
+			"url": "https://unswsecurity.com",
+			"logo": "assets/clubs/unsw.png"
+		},
+		{
+			"name": "UQ Cyber",
+			"campus": "University of Queensland",
+			"url": "https://uqcyber.org",
+			"logo": "assets/clubs/uqcloud.png"
+		},
+		{
+			"name": "USyd CyberSoc",
+			"campus": "University of Sydney",
+			"url": "https://usydcyber.com",
+			"logo": "assets/clubs/usyd.png"
+		},
+		{
+			"name": "UTS Cyber Security Society",
+			"campus": "University of Technology Sydney",
+			"url": "https://utscyber.org",
+			"logo": "assets/clubs/uts.png"
+		},
+		{
+			"name": "UNE Cybersecurity",
+			"campus": "University of New England",
+			"url": "https://une.edu.au",
+			"logo": "assets/clubs/une.webp"
+		}
+	],
+	"sponsors": [
+		{
+			"name": "Legion Offensive Security",
+			"url": "https://legionoffensivesecurity.com",
+			"logo": "/assets/sponsors/LEGION.png",
+			"description": "TRANSFORMING CULTURE, STRENGTHENING SECURITY."
+		}
+	],
+	"faqs": [
+		{
+			"q": "Who can join?",
+			"a": "Australian uni and TAFE students, recent grads, and early-career participants. International students studying in Australia are also welcome!"
+		},
+		{
+			"q": "Do I need experience?",
+			"a": "No experience required! We have a beginner route with guided challenges and mentors available throughout the event."
+		},
+		{
+			"q": "How do teams work?",
+			"a": "Teams can have up to 4 players. You can register solo and find a team later, or register with your existing team."
+		},
+		{
+			"q": "What do I need?",
+			"a": "Just a laptop, internet connection, and a modern browser. No special software required!"
+		},
+		{
+			"q": "Is it free?",
+			"a": "Yes, completely free! No hidden costs or premium tiers."
+		},
+		{
+			"q": "How do I prepare?",
+			"a": "Read our beginner guide, try the teaser challenge, and join our Discord for tips and community support."
+		},
+		{
+			"q": "Will there be prizes?",
+			"a": "Yes! We have prizes for top teams and individuals, plus recognition for all participants. Details announced closer to the event."
+		},
+		{
+			"q": "What time zones are supported?",
+			"a": "The event runs in Australian Eastern Daylight Time (AEDT). We provide time zone converters and schedule information for all participants."
+		},
+		{
+			"q": "Can I participate from overseas?",
+			"a": "The event is designed for Australian students, but international participants are welcome if they meet the eligibility criteria."
+		},
+		{
+			"q": "What if I get stuck?",
+			"a": "Our mentor team is available throughout the event via Discord. We also provide hints and beginner-friendly resources."
+		}
+	],
+	"teaserChallenge": {
+		"question": "What's the most common password in the world? (Hint: it's not 'password')",
+		"answer": "123456",
+		"alternatives": ["password", "admin", "qwerty", "letmein", "welcome", "123456789", "12345678", "12345"]
+	},
+	"socialProof": {
+		"quotes": [
+			{
+				"text": "The best CTF I've participated in. Great community and challenging problems!",
+				"author": "Sarah Chen",
+				"university": "UNSW Sydney"
+			},
+			{
+				"text": "Perfect for beginners like me. The mentors were incredibly helpful.",
+				"author": "Alex Thompson",
+				"university": "Monash University"
+			}
+		]
+	},
+	"meta": {
+		"description": "Free 24 hour student-built cybersecurity competition for Australian uni students. Beginner friendly. Join solo or as a team.",
+		"keywords": "CTF, cybersecurity, competition, students, Australia, capture the flag, hacking, security",
+		"author": "ACUCyS",
+		"ogImage": "/assets/og-image.jpg",
+		"twitterHandle": "@acucys"
+	}
 }
